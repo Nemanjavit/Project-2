@@ -32,13 +32,38 @@ img {
     margin: 0 auto;
     padding: 0 15px;
 }
+nav {
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    p{
+        margin:0 10px;
+    }
+       
+    
+}
 .hamburger {
+    visibility: hidden;
+    display: flex;
     width: 40px;
 	height: 40px;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	cursor: pointer;
+    cursor: pointer;
+    span {
+		display: block;
+		width: 35px;
+		height: 2px;
+		background-color: #fff;
+
+		&:nth-of-type(2){
+			margin: 5px 0;
+        }
+    }
+        
+    
 }
 .button {
     padding: 15px 30px;
@@ -291,13 +316,14 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    
+           
     .heading {
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50% ,-50%);
-        text-align: center;
-        color: white;
+       
+        p {
+            margin: 0;
+            color: white;
+        }
     }
     h2 {
         color:white;
@@ -306,14 +332,15 @@ img {
         visibility: hidden;
     }
     .wrapper {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50% ,-20%);
-        width: max-content;
-    
-    .input {
-        width: 48%;
+           position: absolute;
+           transform: translate(10%,-100%);
+           width: 100%;
+           
+           form {
+               width: 100%;
+                        }
+        .input {
+            width: 48%;
         &:nth-of-type(2){
             margin-left: 29px;
         }
@@ -326,4 +353,81 @@ img {
 
     }
 }
+}
+@media(max-width:420px){
+    nav {
+        .hamburger{
+            visibility: visible;
+        }
+        p{
+            display: none;
+        }
+    }
+   .banner-heading{
+       h1 {
+        
+        width: 400px;
+        font-size: 40px;
+    }
+    p {
+       font-size: 15px;
+    }
+   }
+   .button {
+       width: 90%;
+       margin-top:10px;
+   }
+   .icons {
+       .container{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           .article {
+               width: 100%;
+           }
+       }
+   }
+   .subscribe-section {
+       height: 300px;
+      
+       
+       form {
+            .input {
+           width: 100%;
+     
+       }
+       .button {
+           width: 100%;
+           margin: 10px 0;
+       }
+
+       }
+      
+   }
+  .portfolio {
+      display: flex;
+      flex-direction: column;
+  }
+  .heading{
+            width: 90%;
+        }
+    .our-works {
+        
+        .button {
+            width: 100%;
+            margin: 0;
+        }
+    }
+    .people-say {
+        p {
+            font-size: 16px;
+        }
+        .arrow-right {
+            right: 5%;
+        }
+        .arrow-left {
+            left: 5%;
+        }
+    }
+   
 }
