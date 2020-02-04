@@ -243,13 +243,9 @@ nav p {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 70px 0;
-  position: relative;
 }
 .people-say .content {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -30%);
+  position: relative;
   text-align: center;
   font-size: 25px;
   width: 100%;
@@ -298,6 +294,16 @@ nav p {
   background-repeat: no-repeat;
   position: relative;
 }
+.say-hello .button {
+  margin: 0;
+}
+.say-hello form {
+  width: 100%;
+}
+.say-hello .input-holder {
+  display: flex;
+  justify-content: space-between;
+}
 .say-hello .heading p {
   margin: 0;
   color: white;
@@ -309,18 +315,11 @@ nav p {
   visibility: hidden;
 }
 .say-hello .wrapper {
-  position: absolute;
-  transform: translate(10%, -100%);
   width: 100%;
 }
 .say-hello .wrapper form {
   width: 100%;
-}
-.say-hello .wrapper .input {
-  width: 48%;
-}
-.say-hello .wrapper .input:nth-of-type(2) {
-  margin-left: 29px;
+  padding: 0;
 }
 .say-hello .wrapper textarea {
   border-radius: 10px;
@@ -328,8 +327,15 @@ nav p {
   width: 100%;
   min-height: 200px;
 }
+.say-hello .wrapper .input {
+  width: 45%;
+}
 
 @media (max-width: 420px) {
+  .heading {
+    max-width: 400px;
+  }
+
   nav .hamburger {
     visibility: visible;
   }
@@ -337,12 +343,15 @@ nav p {
     display: none;
   }
 
+  .banner-heading {
+    width: 100%;
+  }
   .banner-heading h1 {
-    width: 400px;
-    font-size: 40px;
+    font-size: 30px;
+    width: 100%;
   }
   .banner-heading p {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   .button {
@@ -373,6 +382,7 @@ nav p {
   .portfolio {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .heading {
@@ -384,6 +394,10 @@ nav p {
     margin: 0;
   }
 
+  .our-team .heading {
+    width: 90%;
+  }
+
   .people-say p {
     font-size: 16px;
   }
@@ -392,6 +406,221 @@ nav p {
   }
   .people-say .arrow-left {
     left: 5%;
+  }
+
+  .say-hello {
+    min-height: 800px;
+  }
+  .say-hello .heading {
+    width: 90%;
+  }
+  .say-hello .input-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .say-hello .input-holder .input {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .say-hello .orange {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 421px) {
+  .banner-heading {
+    width: 100%;
+  }
+  .banner-heading h1 {
+    width: 100%;
+    font-size: 35px;
+  }
+  .banner-heading p {
+    font-size: 20px;
+  }
+
+  .button {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .icons .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .icons .container .article {
+    width: 80%;
+  }
+
+  .subscribe-section {
+    min-height: 200px;
+  }
+  .subscribe-section .input {
+    width: 45%;
+  }
+  .subscribe-section .button {
+    width: 40%;
+    margin: 0;
+  }
+
+  .heading {
+    width: 90%;
+    max-width: 550px;
+  }
+
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .people-say p {
+    font-size: 16px;
+  }
+  .people-say .arrow-right {
+    right: 5%;
+  }
+  .people-say .arrow-left {
+    left: 5%;
+  }
+
+  .say-hello .input-holder {
+    flex-direction: column;
+    align-items: center;
+  }
+  .say-hello .input-holder .input {
+    width: 100%;
+    margin: 10px;
+  }
+  .say-hello .input-holder .button {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 550px;
+  }
+}
+@media (min-width: 422px) and (max-width: 767px) {
+  .banner-heading {
+    width: 100%;
+  }
+  .banner-heading h1 {
+    width: 100%;
+    font-size: 40px;
+  }
+  .banner-heading p {
+    font-size: 25px;
+  }
+
+  .button {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .icons .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .icons .container .article {
+    width: 80%;
+  }
+
+  .subscribe-section {
+    min-height: 200px;
+  }
+  .subscribe-section .input {
+    width: 45%;
+  }
+  .subscribe-section .button {
+    width: 40%;
+    margin: 0;
+  }
+
+  .heading {
+    width: 90%;
+    max-width: 550px;
+  }
+
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .people-say p {
+    font-size: 16px;
+  }
+  .people-say .arrow-right {
+    right: 5%;
+  }
+  .people-say .arrow-left {
+    left: 5%;
+  }
+
+  .say-hello .input-holder {
+    flex-direction: column;
+    align-items: center;
+  }
+  .say-hello .input-holder .input {
+    width: 100%;
+    margin: 10px;
+  }
+  .say-hello .input-holder .button {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 550px;
+  }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  .heading {
+    width: 80%;
+  }
+
+  .banner-heading {
+    width: 90%;
+  }
+  .banner-heading h1 {
+    font-size: 40px;
+  }
+  .banner-heading p {
+    font-size: 25px;
+  }
+  .banner-heading .button {
+    width: 45%;
+  }
+
+  .icons .container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .icons .container .article {
+    width: 100%;
+  }
+
+  .portfolio {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio img {
+    margin: 0 auto;
+  }
+
+  .say-hello .input-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .say-hello .input-holder .input {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .say-hello .input-holder .button {
+    width: 100%;
+    max-width: 550px;
+    margin-bottom: 20px;
   }
 }
 

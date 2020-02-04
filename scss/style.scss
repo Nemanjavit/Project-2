@@ -19,6 +19,7 @@ body {
 img {
     max-width: 100%;
 }
+
 .portfolio {
     display: grid;
     grid-gap: 20px;
@@ -80,7 +81,7 @@ nav {
         background-color: $orange;
         border-color: $orange;
         
-       }
+   }
 
 }
 .orange {
@@ -154,6 +155,8 @@ nav {
 .main {
     margin-top: -173.5px;
 }
+
+    
 
 .banner-section {
     background-image: url(/img/main-banner.jpg);
@@ -255,13 +258,10 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 70px 0;
-    position: relative;
+    
         
     .content{
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50% ,-30%);
+        position: relative;     
         text-align: center;
         font-size: 25px;
         width: 100%;
@@ -316,8 +316,16 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    
-           
+    .button {
+        margin:0;
+    }
+    form {
+         width: 100%;
+     }
+    .input-holder {
+        display: flex;
+        justify-content: space-between;
+    }         
     .heading {
        
         p {
@@ -332,19 +340,13 @@ nav {
         visibility: hidden;
     }
     .wrapper {
-           position: absolute;
-           transform: translate(10%,-100%);
-           width: 100%;
            
-           form {
+           width: 100%;           
+        form {
                width: 100%;
-                        }
-        .input {
-            width: 48%;
-        &:nth-of-type(2){
-            margin-left: 29px;
-        }
-    }
+               padding: 0;
+       }
+
     textarea {
         border-radius: 10px;
         margin:20px 0;
@@ -352,9 +354,17 @@ nav {
         min-height:200px;
 
     }
+    .input {
+        width: 45%;
+    }
 }
 }
 @media(max-width:420px){
+   
+ .heading {
+       max-width: 400px;
+   }
+   
     nav {
         .hamburger{
             visibility: visible;
@@ -364,14 +374,16 @@ nav {
         }
     }
    .banner-heading{
+       width: 100%;
        h1 {
+        font-size: 30px;
+        width: 100%;
         
-        width: 400px;
-        font-size: 40px;
     }
     p {
-       font-size: 15px;
+        font-size: 20px;
     }
+    
    }
    .button {
        width: 90%;
@@ -407,6 +419,7 @@ nav {
   .portfolio {
       display: flex;
       flex-direction: column;
+      align-items: center;
   }
   .heading{
             width: 90%;
@@ -418,6 +431,13 @@ nav {
             margin: 0;
         }
     }
+    .our-team {
+        .heading{
+            width: 90%;
+        }
+    }
+    
+    
     .people-say {
         p {
             font-size: 16px;
@@ -428,6 +448,237 @@ nav {
         .arrow-left {
             left: 5%;
         }
+                       
     }
-   
+   .say-hello {
+       min-height:800px;
+       .heading {
+           width: 90%;
+       }
+      
+       .input-holder {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+          
+           .input {
+           width: 100%;
+           margin-top: 10px;
+       }
+    }
+    .orange {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    
+    
+   }
 }
+@media(max-width:421px){
+    
+    .banner-heading {
+        width: 100%;
+        h1 {
+            width: 100%;
+            font-size: 35px;
+        }
+        p {
+            font-size: 20px;
+        }
+        
+            
+        
+    }
+    .button {
+        width: 80%;
+        margin-top:10px;
+    }
+    .icons {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .article {
+                width: 80%;
+            }
+        }
+    }
+    .subscribe-section {
+        min-height:200px;
+        .input {
+            width: 45%;
+        }
+        .button {
+            width: 40%;
+            margin: 0;
+        }
+    }
+    .heading {
+        width: 90%;
+        max-width: 550px;
+    }
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .people-say {
+        p {
+            font-size: 16px;
+            
+        }
+        .arrow-right {
+            right: 5%;
+        }
+        .arrow-left {
+            left: 5%;
+        }
+                       
+    }
+    .say-hello {
+        .input-holder {
+            flex-direction: column;
+            align-items: center;
+            .input {
+                width: 100%;
+                margin: 10px;
+            }
+            .button {
+                margin-bottom: 20px;
+                width: 100%;
+                max-width: 550px;
+            }
+        }
+    }
+    
+}
+@media(min-width:422px) and(max-width:767px){
+    .banner-heading {
+        width: 100%;
+        h1 {
+            width: 100%;
+            font-size: 40px;
+        }
+        p {
+            font-size: 25px;
+        }
+                   
+    }
+    .button {
+        width: 80%;
+        margin-top:10px;
+    }
+    .icons {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .article {
+                width: 80%;
+            }
+        }
+    }
+    .subscribe-section {
+        min-height:200px;
+        .input {
+            width: 45%;
+        }
+        .button {
+            width: 40%;
+            margin: 0;
+        }
+    }
+    .heading {
+        width: 90%;
+        max-width: 550px;
+    }
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .people-say {
+        p {
+            font-size: 16px;
+            
+        }
+        .arrow-right {
+            right: 5%;
+        }
+        .arrow-left {
+            left: 5%;
+        }
+                       
+    }
+    .say-hello {
+        .input-holder {
+            flex-direction: column;
+            align-items: center;
+            .input {
+                width: 100%;
+                margin: 10px;
+            }
+            .button {
+                margin-bottom: 20px;
+                width: 100%;
+                max-width: 550px;
+            }
+        }
+    }
+}
+@media(min-width:768px)and (max-width:990px){
+    .heading {
+        width: 80%;
+    }
+    .banner-heading {
+        width: 90%;
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 25px;
+        }
+        .button {
+            width: 45%;
+        }
+    }
+    .icons {
+        .container {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(2,1fr);
+            .article {
+                width: 100%;
+            }
+                                  
+        }
+       
+    }
+    .portfolio {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2,1fr);
+        img { 
+            margin: 0 auto;
+        }
+    }
+    .say-hello {
+        .input-holder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .input {
+                width: 100%;
+                margin-top:10px ;
+            }
+            .button {
+                width: 100%;
+                max-width: 550px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+ 
